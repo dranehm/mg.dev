@@ -27,7 +27,7 @@ export function Footer() {
           <Mail size={20} />
         </a>
         <a 
-          href="https://github.com" // Placeholder since no github provided
+          href="https://github.com/dranehm" // Placeholder since no github provided
           target="_blank" 
           rel="noopener noreferrer" 
           className="hover:text-primary transition-colors flex items-center justify-center p-2 rounded-full hover:bg-surface-container"

@@ -13,13 +13,15 @@ const NAV_LINKS = [
 ];
 
 export function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { scrollY } = useScroll();
 
+  // Clear active section when on hero page (top of page)
   useMotionValueEvent(scrollY, "change", (latest) => {
-    setIsScrolled(latest > 50);
+    if (latest < 100) {
+      setActiveSection("");
+    }
   });
 
   useEffect(() => {
@@ -64,9 +66,7 @@ export function Navbar() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, type: "spring", stiffness: 100 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-surface/80 backdrop-blur-md border-b border-surface-container shadow-elevation-1 py-4" : "bg-transparent py-6"
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-md border-b border-surface-container shadow-elevation-1 py-4"
     >
       <div className="container mx-auto px-6 max-w-6xl flex items-center justify-between">
         <a 

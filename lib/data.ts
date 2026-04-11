@@ -4,10 +4,10 @@ import { LuCode, LuDatabase, LuMonitor, LuHardDrive, LuNetwork, LuWrench, LuSend
 export const PROFILE = {
   name: "Mhenard",
   fullName: "Mhenard Djoe U. Galapate",
-  subtitles: ["Full-Stack Developer", "IT Support Specialist", "API Engineer"],
+  subtitles: ["Back-End Developer", "IT Support Specialist", "Tech Enthusiast"],
   bio: "I'm an IT professional based in Pangasinan, Philippines with experience spanning full-stack PHP/Node.js development, REST API engineering, and hands-on technical support. I build systems that are reliable, documented, and maintainable.",
   quickFacts: [
-    { label: "Education", value: "BS Information Technology — PSU Bayambang (GPA 1.71)", icon: "🎓" },
+    { label: "Education", value: "BS Information Technology — PSU Bayambang", icon: "🎓" },
     { label: "Location", value: "Pangasinan, Philippines", icon: "📍" },
     { label: "Email", value: "mdgalapate@gmail.com", icon: "📧" },
     { label: "Phone", value: "(+63) 9368214529", icon: "📞" }
