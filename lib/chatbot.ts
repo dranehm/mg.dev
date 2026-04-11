@@ -34,10 +34,10 @@ const generateResponse = (userMessage: string): string => {
 
   // Experience
   if (message.match(/experience|work|job|career|background/)) {
-    const exp = EXPERIENCE.slice(0, 3)
+    const exp = EXPERIENCE
       .map((e) => `${e.title} at ${e.company} (${e.date})\n${e.description}`)
       .join('\n\n');
-    return `Here's my recent experience:\n\n${exp}`;
+    return `Here's my complete work experience:\n\n${exp}`;
   }
 
   // Contact
