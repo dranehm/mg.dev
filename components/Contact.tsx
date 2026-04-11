@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Linkedin, PhoneCall, Send } from "lucide-react";
+import { LuMail as Mail, LuLinkedin as Linkedin, LuPhoneCall as PhoneCall, LuSend as Send } from 'react-icons/lu';
 import { Button } from "./ui/Button";
 import { PROFILE } from "../lib/data";
 

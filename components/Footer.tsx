@@ -1,7 +1,9 @@
 "use client";
 
 import React from "react";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { SiGithub as Github } from 'react-icons/si';
+import { BsLinkedin as Linkedin } from 'react-icons/bs';
+import { HiMail as Mail } from 'react-icons/hi';
 import { PROFILE } from "../lib/data";
 
 export function Footer() {

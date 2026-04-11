@@ -1,12 +1,5 @@
 import React from "react";
-import { 
-  SiNodedotjs, SiPhp, SiPython, SiDotnet, 
-  SiMysql, SiMicrosoftsqlserver, 
-  SiWindows, SiLinux, SiPostman, 
-  SiJavascript, SiJquery, SiCss3, SiBootstrap 
-} from "react-icons/si";
-import { FaNetworkWired, FaTools } from "react-icons/fa";
-import { MdOutlineApi, MdHardware } from "react-icons/md";
+import { LuCode, LuDatabase, LuMonitor, LuHardDrive, LuNetwork, LuWrench, LuSend } from 'react-icons/lu';
 
 export const PROFILE = {
   name: "Mhenard",
@@ -30,38 +23,38 @@ export const SKILL_CATEGORIES = [
   {
     title: "Core Stack",
     skills: [
-      { name: "Node.js", icon: React.createElement(SiNodedotjs) },
-      { name: "PHP", icon: React.createElement(SiPhp) },
-      { name: "Python", icon: React.createElement(SiPython) },
-      { name: ".NET Framework", icon: React.createElement(SiDotnet) }
+      { name: "Node.js", icon: React.createElement(LuCode) },
+      { name: "PHP", icon: React.createElement(LuCode) },
+      { name: "Python", icon: React.createElement(LuCode) },
+      { name: ".NET Framework", icon: React.createElement(LuCode) }
     ]
   },
   {
     title: "Databases",
     skills: [
-      { name: "MySQL", icon: React.createElement(SiMysql) },
-      { name: "MS SQL Server", icon: React.createElement(SiMicrosoftsqlserver) }
+      { name: "MySQL", icon: React.createElement(LuDatabase) },
+      { name: "MS SQL Server", icon: React.createElement(LuDatabase) }
     ]
   },
   {
     title: "Infrastructure",
     skills: [
-      { name: "Windows", icon: React.createElement(SiWindows) },
-      { name: "Linux", icon: React.createElement(SiLinux) },
-      { name: "Hardware", icon: React.createElement(MdHardware) },
-      { name: "Network Troubleshooting", icon: React.createElement(FaNetworkWired) }
+      { name: "Windows", icon: React.createElement(LuMonitor) },
+      { name: "Linux", icon: React.createElement(LuMonitor) },
+      { name: "Hardware", icon: React.createElement(LuHardDrive) },
+      { name: "Network Troubleshooting", icon: React.createElement(LuNetwork) }
     ]
   },
   {
     title: "Tools & APIs",
     skills: [
-      { name: "RESTful API", icon: React.createElement(MdOutlineApi) },
-      { name: "Appian", icon: React.createElement(FaTools) }, // Appian icon not in standard set, using fallback
-      { name: "Postman", icon: React.createElement(SiPostman) },
-      { name: "JavaScript", icon: React.createElement(SiJavascript) },
-      { name: "jQuery", icon: React.createElement(SiJquery) },
-      { name: "CSS3", icon: React.createElement(SiCss3) },
-      { name: "Bootstrap", icon: React.createElement(SiBootstrap) }
+      { name: "RESTful API", icon: React.createElement(LuCode) },
+      { name: "Appian", icon: React.createElement(LuWrench) }, // Appian icon not in standard set, using fallback
+      { name: "Postman", icon: React.createElement(LuSend) },
+      { name: "JavaScript", icon: React.createElement(LuCode) },
+      { name: "jQuery", icon: React.createElement(LuCode) },
+      { name: "CSS3", icon: React.createElement(LuCode) },
+      { name: "Bootstrap", icon: React.createElement(LuCode) }
     ]
   }
 ];
