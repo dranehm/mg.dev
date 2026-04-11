@@ -78,27 +78,30 @@ export function Navbar() {
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     setIsMobileMenuOpen(false);
-
-    if (href === "#top") {
-      const targetY = 0;
-      if (supportsNativeSmoothScroll()) {
-        window.scrollTo({ top: targetY, behavior: 'smooth' });
-      } else {
-        smoothScrollTo(targetY);
+    
+    // Delay scroll slightly to allow menu to close first
+    setTimeout(() => {
+      if (href === "#top") {
+        const targetY = 0;
+        if (supportsNativeSmoothScroll()) {
+          window.scrollTo({ top: targetY, behavior: 'smooth' });
+        } else {
+          smoothScrollTo(targetY);
+        }
+        return;
       }
-      return;
-    }
 
-    const id = href.substring(1);
-    const element = document.getElementById(id);
-    if (element) {
-      const targetY = element.getBoundingClientRect().top + window.scrollY - 80;
-      if (supportsNativeSmoothScroll()) {
-        window.scrollTo({ top: targetY, behavior: 'smooth' });
-      } else {
-        smoothScrollTo(targetY);
+      const id = href.substring(1);
+      const element = document.getElementById(id);
+      if (element) {
+        const targetY = element.getBoundingClientRect().top + window.scrollY - 80;
+        if (supportsNativeSmoothScroll()) {
+          window.scrollTo({ top: targetY, behavior: 'smooth' });
+        } else {
+          smoothScrollTo(targetY);
+        }
       }
-    }
+    }, 150);
   };
 
   return (
@@ -156,9 +159,10 @@ export function Navbar() {
         initial={false}
         animate={isMobileMenuOpen ? "open" : "closed"}
         variants={{
-          open: { height: "auto", opacity: 1, visibility: "visible" },
-          closed: { height: 0, opacity: 0, visibility: "hidden" }
+          open: { maxHeight: 500, opacity: 1, visibility: "visible" },
+          closed: { maxHeight: 0, opacity: 0, visibility: "hidden" }
         }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
         className="md:hidden overflow-hidden bg-surface-container border-b border-outline/20"
       >
         <div className="flex flex-col px-6 py-4 gap-4">
