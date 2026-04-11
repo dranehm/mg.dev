@@ -74,7 +74,7 @@ export function Navbar() {
           onClick={(e) => handleClick(e, "#top")}
           className="text-xl font-mono font-bold tracking-tighter hover:opacity-80 transition-opacity"
         >
-          <span className="text-primary">mg</span>.dev
+          <span className="text-primary">dranehm</span>.dev
         </a>
 
         {/* Desktop Nav */}
