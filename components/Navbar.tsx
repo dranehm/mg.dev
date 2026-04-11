@@ -50,14 +50,54 @@ export function Navbar() {
     return () => observer.disconnect();
   }, []);
 
+  const smoothScrollTo = (targetY: number) => {
+    const startY = window.scrollY;
+    const distance = targetY - startY;
+    if (distance === 0) return;
+
+    const duration = 500;
+    const ease = (t: number) => (t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t);
+    const startTime = performance.now();
+
+    const step = (currentTime: number) => {
+      const elapsed = Math.min((currentTime - startTime) / duration, 1);
+      const nextY = Math.round(startY + distance * ease(elapsed));
+      window.scrollTo(0, nextY);
+      if (elapsed < 1) {
+        requestAnimationFrame(step);
+      }
+    };
+
+    requestAnimationFrame(step);
+  };
+
+  const supportsNativeSmoothScroll = () => {
+    return 'scrollBehavior' in document.documentElement.style;
+  };
+
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     setIsMobileMenuOpen(false);
+
+    if (href === "#top") {
+      const targetY = 0;
+      if (supportsNativeSmoothScroll()) {
+        window.scrollTo({ top: targetY, behavior: 'smooth' });
+      } else {
+        smoothScrollTo(targetY);
+      }
+      return;
+    }
+
     const id = href.substring(1);
     const element = document.getElementById(id);
     if (element) {
-      const y = element.getBoundingClientRect().top + window.scrollY - 80; // offset for fixed header
-      window.scrollTo({ top: y, behavior: 'smooth' });
+      const targetY = element.getBoundingClientRect().top + window.scrollY - 80;
+      if (supportsNativeSmoothScroll()) {
+        window.scrollTo({ top: targetY, behavior: 'smooth' });
+      } else {
+        smoothScrollTo(targetY);
+      }
     }
   };
 
@@ -68,6 +108,7 @@ export function Navbar() {
       transition={{ duration: 0.6, type: "spring", stiffness: 100 }}
       className="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-md border-b border-surface-container shadow-elevation-1 py-4"
     >
+
       <div className="container mx-auto px-6 max-w-6xl flex items-center justify-between">
         <a 
           href="#top" 

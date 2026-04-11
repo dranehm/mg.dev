@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "mg.dev | Mhenard Galapate",
+  title: "dranehm.dev",
   description: "IT professional and full-stack developer based in Pangasinan, Philippines.",
 };
 

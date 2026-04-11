@@ -25,7 +25,7 @@ export function Contact() {
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true, margin: "-10%" }}
+          viewport={{ once: false, margin: "-10%" }}
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-sm font-mono tracking-[0.2em] font-bold text-primary mb-2 uppercase">Contact</h2>
@@ -41,7 +41,7 @@ export function Contact() {
             className="flex lg:flex-col gap-6 w-full lg:w-auto shrink-0 justify-center"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             transition={{ duration: 0.6 }}
           >
             <a href={PROFILE.socials.email} className="group relative">
@@ -86,7 +86,7 @@ export function Contact() {
             className="w-full max-w-md p-8 bg-surface-container rounded-3xl border border-outline/20 shadow-elevation-2"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <form onSubmit={handleSubmit} className="flex flex-col gap-6">

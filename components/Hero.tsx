@@ -49,7 +49,8 @@ export function Hero() {
       <div className="container relative z-10 px-6 mx-auto text-center max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, margin: "-50%" }}
           transition={{ duration: 0.8 }}
           className="space-y-6"
         >
@@ -59,7 +60,8 @@ export function Hero() {
               <motion.span
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false }}
                 transition={{
                   duration: 0.5,
                   delay: index * 0.08,
@@ -100,8 +102,9 @@ export function Hero() {
 
           <motion.p 
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.5, duration: 1 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: false }}
+            transition={{ delay: 0.3, duration: 1 }}
             className="text-lg md:text-xl text-on-surface-variant max-w-2xl mx-auto mt-8 mb-12"
           >
             Building systems that are reliable, documented, and maintainable.
@@ -109,8 +112,9 @@ export function Hero() {
 
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.8, duration: 0.5 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ delay: 0.5, duration: 0.5 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4"
           >
             <Button 
@@ -134,8 +138,9 @@ export function Hero() {
       {/* Scroll Indicator */}
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 2.5, duration: 1 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: false }}
+        transition={{ delay: 0.8, duration: 1 }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2"
       >
         <motion.a

@@ -12,7 +12,7 @@ export function About() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-10%" }}
+          viewport={{ once: false, margin: "-10%" }}
           transition={{ duration: 0.6 }}
           className="mb-12 text-center md:text-left"
         >
@@ -25,7 +25,7 @@ export function About() {
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-10%" }}
+            viewport={{ once: false, margin: "-10%" }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg text-on-surface-variant leading-relaxed"
           >
@@ -42,7 +42,7 @@ export function About() {
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-10%" }}
+            viewport={{ once: false, margin: "-10%" }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <Card hoverable className="h-full bg-surface-container/50 border-primary/20 backdrop-blur-sm shadow-primary/5">
@@ -57,7 +57,7 @@ export function About() {
                     className="flex gap-4 items-start"
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: false }}
                     transition={{ delay: 0.6 + index * 0.1 }}
                   >
                     <span className="text-2xl pt-1 flex-shrink-0">{fact.icon}</span>

@@ -12,7 +12,7 @@ export function Experience() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-10%" }}
+          viewport={{ once: false, margin: "-10%" }}
           transition={{ duration: 0.6 }}
           className="mb-20 text-center"
         >
@@ -36,7 +36,7 @@ export function Experience() {
                     <motion.div 
                       initial={{ scale: 0 }}
                       whileInView={{ scale: 1 }}
-                      viewport={{ once: true, margin: "-10%" }}
+                      viewport={{ once: false, margin: "-10%" }}
                       transition={{ type: "spring", stiffness: 300, damping: 20, delay: 0.2 }}
                       className="w-4 h-4 rounded-full bg-primary shadow-[0_0_10px_rgba(0,229,255,0.8)] ring-4 ring-surface"
                     />
@@ -46,7 +46,7 @@ export function Experience() {
                   <motion.div 
                     initial={{ opacity: 0, x: isEven ? -50 : 50 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true, margin: "-10%" }}
+                    viewport={{ once: false, margin: "-10%" }}
                     transition={{ type: "spring", stiffness: 100, damping: 20 }}
                     className={`w-full sm:w-[calc(100%-5rem)] sm:ml-20 md:w-[calc(50%-3rem)] md:ml-0 ${
                       isEven ? "md:mr-auto md:pr-12 md:text-right" : "md:ml-auto md:pl-12"

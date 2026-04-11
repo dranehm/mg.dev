@@ -4,6 +4,10 @@ html {
   scroll-behavior: smooth;
 }
 
+section[id] {
+  scroll-margin-top: 5rem;
+}
+
 @theme inline {
   --color-primary: #00e5ff;
   --color-primary-container: #00333d;

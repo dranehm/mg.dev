@@ -35,7 +35,7 @@ export function Skills() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-10%" }}
+          viewport={{ once: false, margin: "-10%" }}
           transition={{ duration: 0.6 }}
           className="mb-16 text-center"
         >
@@ -49,7 +49,7 @@ export function Skills() {
               key={idx}
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, margin: "-10%" }}
+              viewport={{ once: false, margin: "-10%" }}
               transition={{ delay: idx * 0.1, duration: 0.5 }}
               className="p-8 rounded-3xl bg-surface border border-outline/10 shadow-elevation-1"
             >
@@ -62,7 +62,7 @@ export function Skills() {
                 variants={containerVariants}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true }}
+                viewport={{ once: false }}
               >
                 {category.skills.map((skill, sIdx) => (
                   <motion.div key={sIdx} variants={itemVariants}>

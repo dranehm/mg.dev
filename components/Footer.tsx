@@ -37,7 +37,7 @@ export function Footer() {
       </div>
       
       <p className="font-mono text-sm tracking-wide text-center px-4">
-        &copy; {currentYear} mg.dev &middot; {PROFILE.fullName} &middot; All rights reserved.
+        &copy; dranehm.dev &middot; {PROFILE.fullName} &middot; All rights reserved.
       </p>
     </footer>
   );

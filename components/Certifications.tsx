@@ -12,7 +12,7 @@ export function Certifications() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-10%" }}
+          viewport={{ once: false, margin: "-10%" }}
           transition={{ duration: 0.6 }}
           className="mb-16 text-center"
         >
@@ -26,7 +26,7 @@ export function Certifications() {
               key={cert.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-10%" }}
+              viewport={{ once: false, margin: "-10%" }}
               transition={{ delay: index * 0.1, duration: 0.5, type: "spring", stiffness: 200 }}
             >
               <Card hoverable className="h-full flex flex-col items-start gap-4 p-8 relative overflow-hidden group border-outline/20 bg-surface-container">

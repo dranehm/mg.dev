@@ -116,12 +116,12 @@ export function ChatBot() {
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
-            className="fixed bottom-24 right-6 z-50 w-96 h-96 bg-white dark:bg-surface rounded-2xl shadow-2xl flex flex-col border border-outline/20"
+            className="fixed bottom-24 right-4 z-50 w-[min(92vw,24rem)] max-w-md h-[min(80vh,28rem)] bg-white dark:bg-surface rounded-2xl shadow-2xl flex flex-col border border-outline/20"
           >
             {/* Header */}
             <div className="bg-primary text-slate-900 p-4 rounded-t-2xl flex justify-between items-center">
               <div>
-                <h3 className="font-bold text-lg">Mhenard's Assistant</h3>
+                <h3 className="font-bold text-lg">Mhenard&apos;s Assistant</h3>
                 <p className="text-xs text-slate-700">Always here to help</p>
               </div>
             </div>
