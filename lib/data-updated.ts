@@ -1,5 +1,8 @@
 import React from "react";
 import { LuCode, LuDatabase, LuMonitor, LuHardDrive, LuNetwork, LuWrench, LuSend } from 'react-icons/lu';
+import DictIcon from '../public/icons/dict-philippines.svg';
+import CscIcon from '../public/icons/csc-philippines.svg';
+import PythonIcon from '../public/icons/python-logo-monochrome.svg';
 
 export const PROFILE = {
   name: "Mhenard",
@@ -16,7 +19,7 @@ export const PROFILE = {
     linkedin: "https://linkedin.com/in/drnhmg",
     email: "mailto:mdgalapate@gmail.com",
     phone: "tel:+639368214529"
-  } 
+  }
 };
 
 export const SKILL_CATEGORIES = [
@@ -49,7 +52,7 @@ export const SKILL_CATEGORIES = [
     title: "Tools & APIs",
     skills: [
       { name: "RESTful API", icon: React.createElement(LuCode) },
-      { name: "Appian", icon: React.createElement(LuWrench) }, // Appian icon not in standard set, using fallback
+      { name: "Appian", icon: React.createElement(LuWrench) },
       { name: "Postman", icon: React.createElement(LuSend) },
       { name: "JavaScript", icon: React.createElement(LuCode) },
       { name: "jQuery", icon: React.createElement(LuCode) },
@@ -102,21 +105,14 @@ export const EXPERIENCE = [
   }
 ];
 
-// SVG imports temporarily disabled to fix Next.js Turbopack parsing error
-// import DictIcon from '../public/icons/dict-philippines.svg';
-// import CscIcon from '../public/icons/csc-philippines.svg';
-// import PythonIcon from '../public/icons/python-logo-monochrome.svg';
-
 export const CERTIFICATIONS = [
-    {
-      id: 1,
-      name: "Data Privacy Awareness",
-      issuer: "DICT Region 3, Aurora Province",
-      date: "Aug 2025",
-      image: "https://1.bp.blogspot.com/-aEy2QbDgDZA/XjjlNOH2muI/AAAAAAAB6Jo/fY2sXQYA-Esc9wRpD4Tqn4dq6NggQ7j2wCLcBGAsYHQ/s1600/Department_of_Information_and_Communications_Technology_%28DICT%29.svg.png",
-      icon: "🔐"
-    },
-
+  {
+    id: 1,
+    name: "Data Privacy Awareness",
+    issuer: "DICT Region 3, Aurora Province",
+    date: "Aug 2025",
+    icon: React.createElement(DictIcon)
+  },
   {
     id: 2,
     name: "Data Analytics Fundamentals Bootcamp",
@@ -124,24 +120,20 @@ export const CERTIFICATIONS = [
     date: "Feb 2025",
     icon: "📊"
   },
-    {
-      id: 3,
-      name: "Learn Python Programming with ChatGPT",
-      issuer: "Udemy",
-      date: "Jan 2025",
-      image: "https://www.pngmart.com/files/23/Python-Logo-PNG-Image.png",
-      icon: "🐍"
-    },
-
+  {
+    id: 3,
+    name: "Learn Python Programming with ChatGPT",
+    issuer: "Udemy",
+    date: "Jan 2025",
+    icon: React.createElement(PythonIcon)
+  },
   {
     id: 4,
     name: "Civil Service Professional Eligibility",
     issuer: "Civil Service Commission",
     date: "Feb 2024",
-    image: "https://logodix.com/logo/2201595.png",
-    icon: "🏛️"
+    icon: React.createElement(CscIcon)
   },
-
   {
     id: 5,
     name: "Frontend Fundamentals Bootcamp",

@@ -32,8 +32,18 @@ export function Certifications() {
               <Card hoverable className="h-full flex flex-col items-start gap-4 p-8 relative overflow-hidden group border-outline/20 bg-surface-container">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-2xl transform translate-x-10 -translate-y-10 group-hover:bg-primary/10 transition-colors" />
                 
-                <div className="w-12 h-12 bg-surface flex justify-center items-center rounded-2xl shadow-elevation-1 border border-outline/30 text-2xl z-10 transition-transform group-hover:scale-110 duration-300">
-                  {cert.icon}
+                <div className="w-12 h-12 bg-surface flex justify-center items-center rounded-2xl shadow-elevation-1 border border-outline/30 z-10 transition-transform group-hover:scale-110 duration-300 relative overflow-hidden">
+                  {cert.image ? (
+                    <img 
+                      src={cert.image} 
+                      alt={cert.name} 
+                      className={`w-full h-full object-contain ${cert.id === 1 ? 'scale-[0.85]' : cert.id === 4 ? 'scale-[0.75]' : cert.id === 3 ? 'scale-[2]' : ''}`} 
+                    />
+                  ) : (
+                    <span className="text-2xl">
+                      {cert.icon}
+                    </span>
+                  )}
                 </div>
                 
                 <div className="z-10 mt-2">
